@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+.profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    width: 80%;
+    background-color: #fff;
+    padding: 50px 0px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    border-radius: 24px;
+}
+.image {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border: solid #4E6973 3px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.profile-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    scale: 97%;
+    border-radius: 50%;
+    animation: change-scale 1s ease infinite;
+}
+.text-data {
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Funnel Sans';
+    font-size: 25px;
+    font-style:normal;
+    font-weight: 300;
+    color: #415B78
+}
+.text-data .name {
+    font-size: 30px;
+    font-weight: 800;
+    color: #223142
+}
+
+.profile-card .media-buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #CFB6B6;
+    text-decoration: none;
+}
+.buttons {
+    display: flex;
+    flex-direction: row; /* put buttons side by side */
+    gap: 10px;           /* spacing between them */
+    margin-top: 20px;
+    justify-content: center; /* optional: center them */
+    animation: expand-gap 1s ease forwards;
+}
+
+@keyframes expand-gap{
+    from {gap: 10px;
+    }
+    to {gap: 40px;}
+}
+.button {
+    padding: 10px 20px;
+    background-color: #405070;
+    color: #fff;
+    border: none;
+    border-radius: 19px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 1s ease;
+}
+.buttons .button:hover{
+    background-color: #2A2B42;
+    font-size: 20px;
+    scale: 1.04;
+}
+
+.subscribe-info {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.subscribe-info .like, .share {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-right: solid 2px #e7e7e7;
+    font-family: 'Funnel Sans';
+    font-size: 18px;
+    font-style:normal;
+    font-weight: 500;
+    margin-bottom: 5px; 
+}
+.share {
+    border-right: none;
+}
+.profile-card::before {
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 45%;
+    border-radius: 24px 24px 0 0;
+
+    width: 100%;
+    background-color: #E0E0E0;
+
+}
+@keyframes change-scale{
+    0% {
+        scale: 97%;
+    }
+    50% {
+        scale: 96%
+    }
+    100% {
+        scale: 97%
+    }
+}
