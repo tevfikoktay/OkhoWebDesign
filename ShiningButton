@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button-style-div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-of-workshop {
+            border: none;
+            height: 45px;
+            width: 280px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .button-of-workshop span {
+            background: linear-gradient(90deg, #ce79aa, #97c0e6, #ffdeac, #ce79aa);
+            background-size: 200% 200%;
+            background-clip: text;
+            color: transparent;
+            animation: shine-text 5s linear infinite;
+            font-weight: bold;
+        }
+
+        @keyframes shine-text {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-style-div">
+        <button class="button-of-workshop">
+            <span>Bring The Workshop Plan</span>
+        </button>
+    </div>
+</body>
+</html>
